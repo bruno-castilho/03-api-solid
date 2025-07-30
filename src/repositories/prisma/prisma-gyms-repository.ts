@@ -2,7 +2,7 @@ import { prisma } from '@/lib/prisma'
 import { FindManyNearbyParams, GymsRepository } from '../gyms-repository'
 import { Prisma, Gym } from '@prisma/client'
 
-export class PrismaGymGymsRepository implements GymsRepository {
+export class PrismaGymsRepository implements GymsRepository {
   async create(data: Prisma.GymCreateInput) {
     const gym = await prisma.gym.create({
       data,
