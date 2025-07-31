@@ -10,8 +10,10 @@
     "start:dev": "tsx watch src/server.ts",
     "start": "node build/server.js",
     "build": "tsup src --out-dir build",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest run --project unit",
+    "test:e2e": "vitest run --project e2e",
+    "test:watch": "vitest --project unit",
+    "test:e2e:watch": "vitest --project e2e",
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui"
   },
@@ -25,7 +27,8 @@
     "prisma": "6.5.0",
     "tsup": "8.4.0",
     "tsx": "4.19.3",
-    "typescript": "5.8.2"
+    "typescript": "5.8.2",
+    "vite-tsconfig-paths": "5.1.4"
   },
   "dependencies": {
     "-": "0.0.1",
@@ -36,7 +39,6 @@
     "dayjs": "1.11.13",
     "dotenv": "16.4.7",
     "fastify": "5.2.2",
-    "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.1.1",
     "zod": "3.24.2"
   }
